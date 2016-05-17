@@ -17,7 +17,8 @@ module.exports = (function makeWebpackConfig () {
    * Port
    * This is default port for dev server
    */
-  var port = 8080;
+  var port = 9000;
+  var host = '0.0.0.0';
 
   /**
    * Config
@@ -270,7 +271,8 @@ module.exports = (function makeWebpackConfig () {
   config.devServer = {
     contentBase: './src/assets',
     stats: 'minimal',
-    port: port
+    port: port,
+	host: host
   };
 
   return config;
